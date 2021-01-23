@@ -1,10 +1,23 @@
-import React from 'react';
-import Alert from './Alert';
+import React , {useState}from 'react';
 
 const App = () => {
-    return (
+  const [ counter, setCounter] = useState(0);
+
+  return (
       <div className="container mt-5">
-        <Alert text="Hello Paula"/>
+        <button 
+          className="btn btn-primary mr-5"
+          onClick={() => setCounter(counter+1)}> 
+          + 
+        </button>
+        
+        <span> {counter} </span>
+        
+        <button 
+          className="btn btn-danger ml-5"
+          onClick={() => setCounter(counter-1)}> 
+          - 
+        </button>
       </div>
     )
   }
