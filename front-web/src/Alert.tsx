@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Alert = () => {
+type Props = {
+    text: string;
+}
+
+const Alert = ({text}: Props) => {
     return (
-        <div className="alert alert-primary"> Hello </div>
+        <div className="alert alert-primary"> {text} </div>
     )
   }
 
