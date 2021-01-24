@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './styles.scss';
 import {ReactComponent as ArrowIcon} from '../../../../core/assets/images/arrow.svg';
 import {ReactComponent as ProductImage} from '../../../../core/assets/images/product.svg';
 import ProductPrice from '../../../../core/components/ProductPrice';
+import makeRequest from '../../../../core/utils/reques';
 
 type ParamsType={
     productId :string;
@@ -12,6 +13,10 @@ type ParamsType={
 const ProductDetails = () =>{
     const {productId} = useParams<ParamsType>();
     
+    useEffect( () =>{
+        makeRequest({url:`/api/1.0/product/${productId}`})
+        .then(response => console.log(response));
+    },[]);
     return(
         <div className="product-details-container">
             <div className="card-base border-radius-20 product-details">

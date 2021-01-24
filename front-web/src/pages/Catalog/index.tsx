@@ -1,13 +1,17 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import makeRequest from '../../core/utils/reques';
 import ProductCard from './components/ProductCard';
 import './styles.scss';
 
 const Catalog = () =>{
 
     useEffect( () =>{
-        fetch('http://localhost:3000/api/1.0/product')
-        .then(response => response.json())
+        const params={
+            page:0,
+            linesPerPage:12
+        }
+        makeRequest({url:'/api/1.0/product', params})
         .then(response => console.log(response));
     },[]);
 
