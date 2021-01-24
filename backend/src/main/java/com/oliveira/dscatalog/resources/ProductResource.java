@@ -23,7 +23,7 @@ import com.oliveira.dscatalog.dto.ProductDTO;
 import com.oliveira.dscatalog.services.ProductService;
 
 @RestController
-@RequestMapping(value = "/api/1.0/product")
+@RequestMapping(value = "/api/1.0/products")
 public class ProductResource {
 	
 	@Autowired
