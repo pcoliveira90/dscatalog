@@ -1,8 +1,12 @@
 import React from 'react';
 import ContentLoader from 'react-content-loader';
+import { generateList } from '../../../../core/utils/list';
 
-const ProductCardLoader = () => {
-    const loaderItems = [0,1,2];
+type Props ={
+    amount :number;
+}
+const ProductCardLoader = ({amount}:Props) => {
+    const loaderItems = generateList(amount);
     return (
         <>
             {loaderItems.map(item => (

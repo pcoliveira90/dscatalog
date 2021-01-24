@@ -25,7 +25,7 @@ const Catalog = () =>{
         <div className="catalog-container">
             <h1 className="catalog-title">Catálogo de produtos</h1>
             <div className="catalog-products">
-                {isLoading ? <ProductCardLoader />:( productsResponse?.content.map(product => (<Link to={`/products/${product.id}`} key={product.id}><ProductCard product={product} /></Link>)))}
+                {isLoading ? <ProductCardLoader amount={3}/>:( productsResponse?.content.map(product => (<Link to={`/products/${product.id}`} key={product.id}><ProductCard product={product} /></Link>)))}
             </div>
         </div>
     );
