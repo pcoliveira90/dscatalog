@@ -8,6 +8,17 @@ const Catalog = () =>{
             <h1 className="catalog-title">Catálogo de produtos</h1>
             <div className="catalog-products">
                 <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
             </div>
         </div>
     )
