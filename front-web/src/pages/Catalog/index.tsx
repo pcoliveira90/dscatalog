@@ -13,7 +13,7 @@ const Catalog = () =>{
             page:0,
             linesPerPage:12
         }
-        makeRequest({url:'/api/1.0/product', params})
+        makeRequest({url:'/api/1.0/products', params})
         .then(response => setProductsResponse(response.data));
     },[]);
 
@@ -22,7 +22,7 @@ const Catalog = () =>{
             <h1 className="catalog-title">Catálogo de produtos</h1>
             <div className="catalog-products">
                 {productsResponse?.content.map(product => (
-                    <Link to='/products/${product.id}' key={product.id}><ProductCard product={product} /></Link>
+                    <Link to={`/products/${product.id}`} key={product.id}><ProductCard product={product} /></Link>
                 ))}
                 
             </div>
