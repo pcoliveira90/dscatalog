@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ProductsResponse } from '../../core/types/ProductsResponse';
 import makeRequest from '../../core/utils/reques';
 import ProductCard from './components/ProductCard';
-import ProductCardLoader from './components/ProductCardLoader';
+import ProductCardLoader from './components/Loaders/ProductCardLoader';
 import './styles.scss';
 
 const Catalog = () =>{
