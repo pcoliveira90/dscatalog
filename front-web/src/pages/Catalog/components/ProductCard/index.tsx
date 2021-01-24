@@ -7,6 +7,7 @@ import { Product } from '../../../../core/types/Product';
 type Props={
     product: Product;
 }
+
 const ProductCard = ({product}:Props) =>{
     return(
         <div className="card-base border-radius-10 product-card">
